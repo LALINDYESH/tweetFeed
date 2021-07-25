@@ -4,8 +4,8 @@ using System.Text;
 
 namespace tweetFeed
 {
-  public interface IPrintFormater
+  public interface IReadTweets
     {
-        void formator(string User, string message);
+        List<Tweets> ReadTextFile(string path);
     }
 }

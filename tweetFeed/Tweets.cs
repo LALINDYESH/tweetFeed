@@ -4,9 +4,12 @@ using System.Text;
 
 namespace tweetFeed
 {
-    class Tweets
+  public class Tweets : Users
     {
-        public string UserName { get; set; }
+        public Tweets()
+        { }
+        public Tweets(string name) : base(name)
+        { }
         public string Messsage { get; set; }
 
     }

@@ -4,8 +4,14 @@ using System.Text;
 
 namespace tweetFeed
 {
-    class follower
+    public class follower : Users
     {
+
+          public follower()
+           { }
+          public follower(string name) : base(name)
+          { }
+        public List<string> Followers { get; set; }
 
     }
 }

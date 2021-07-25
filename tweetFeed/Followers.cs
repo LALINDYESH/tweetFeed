@@ -4,8 +4,8 @@ using System.Text;
 
 namespace tweetFeed
 {
-    class Followers
+   public class Followers : Users
     {
-        public List<Users> followers { get; set; }
+        public List<Users> followers { get; set;}
     }
 }

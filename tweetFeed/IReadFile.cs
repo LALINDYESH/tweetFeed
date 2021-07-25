@@ -4,7 +4,9 @@ using System.Text;
 
 namespace tweetFeed
 {
-    interface IReadFile
+   public interface IReadFile
     {
+        List<follower> ReadTextFile(string file);
+
     }
 }
