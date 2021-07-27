@@ -1,12 +1,22 @@
 ﻿using System;
+using System.Configuration;
 
 namespace tweetFeed
 {
-    class Program
+  public  class Program
     {
+  
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            ReadTweetsFile _readTweets = new ReadTweetsFile();
+            ReadUserFile _readUser = new ReadUserFile();
+            UserProcess _processUser = new UserProcess();
+            TweetProcessor _tweetProcessor = new TweetProcessor();
+
+           var UserAndFollowerObjList =  _readUser.ReadTextFile(@"c:\Dev\user.txt");
+           var TweetsList = _readTweets.ReadTextFile(@"c:\Dev\tweet.txt");
+           var Allusers = _processUser.ProcessUser(UserAndFollowerObjList);
+           _tweetProcessor.ProcessTweets(Allusers, TweetsList, UserAndFollowerObjList);
         }
     }
 }
