@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "tweetFeed", "tweetFeed\twee
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestTweetFeed", "UnitTestTweetFeed\UnitTestTweetFeed.csproj", "{75768D15-508F-432B-AD03-2E3789F5441E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TweetLikeApp", "TweetLikeApp\TweetLikeApp.csproj", "{A6AD3685-74E2-4A22-B08E-A6B3E8BF5CF9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tweetFeedlikeTest", "tweetFeedlikeTest\tweetFeedlikeTest.csproj", "{38DFB099-7BA1-4DC8-AACB-55E46F31B682}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{75768D15-508F-432B-AD03-2E3789F5441E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75768D15-508F-432B-AD03-2E3789F5441E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75768D15-508F-432B-AD03-2E3789F5441E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A6AD3685-74E2-4A22-B08E-A6B3E8BF5CF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A6AD3685-74E2-4A22-B08E-A6B3E8BF5CF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A6AD3685-74E2-4A22-B08E-A6B3E8BF5CF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A6AD3685-74E2-4A22-B08E-A6B3E8BF5CF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38DFB099-7BA1-4DC8-AACB-55E46F31B682}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38DFB099-7BA1-4DC8-AACB-55E46F31B682}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38DFB099-7BA1-4DC8-AACB-55E46F31B682}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38DFB099-7BA1-4DC8-AACB-55E46F31B682}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

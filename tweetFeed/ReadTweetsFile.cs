@@ -10,21 +10,28 @@ namespace tweetFeed
     {
         public List<Tweets> ReadTextFile(string path)
         {
-            var allLines = File.ReadAllLines(path);
             var listOfTweets = new List<Tweets>();
-            foreach (var line in allLines)
+            try
             {
-                //Assuming that the User and Message only separated by >.
-                var splittedLines = line.Split(new[] { '>' });
-
-                if (splittedLines != null && splittedLines.Any())
+                var allLines = File.ReadAllLines(path);
+                foreach (var line in allLines)
                 {
-                    listOfTweets.Add(new Tweets
+                    //Assuming that the User and Message only separated by >.
+                    var splittedLines = line.Split(new[] { '>' });
+
+                    if (splittedLines != null && splittedLines.Any())
                     {
-                        UserName = splittedLines[0],
-                        Messsage = splittedLines[1]
-                    });
+                        listOfTweets.Add(new Tweets
+                        {
+                            UserName = splittedLines[0],
+                            Messsage = splittedLines[1]
+                        });
+                    }
                 }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("there has been an error that occured : {0}", e);
             }
             return listOfTweets;
         }
