@@ -6,7 +6,7 @@ using System.Text;
 
 namespace tweetFeed
 {
-    class ReadTweetsFile : IReadTweets
+  public class ReadTweetsFile : IReadTweets
     {
         public List<Tweets> ReadTextFile(string path)
         {

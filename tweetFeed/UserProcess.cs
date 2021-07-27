@@ -28,6 +28,7 @@ namespace tweetFeed
                     }
                 }                          
             }
+              followersAndUser.Sort();
             return followersAndUser;
         }
     }

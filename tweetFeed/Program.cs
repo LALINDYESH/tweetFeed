@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Configuration;
+using System.Text;
 
 namespace tweetFeed
 {
@@ -13,10 +14,16 @@ namespace tweetFeed
             UserProcess _processUser = new UserProcess();
             TweetProcessor _tweetProcessor = new TweetProcessor();
 
-           var UserAndFollowerObjList =  _readUser.ReadTextFile(@"c:\Dev\user.txt");
-           var TweetsList = _readTweets.ReadTextFile(@"c:\Dev\tweet.txt");
-           var Allusers = _processUser.ProcessUser(UserAndFollowerObjList);
-           _tweetProcessor.ProcessTweets(Allusers, TweetsList, UserAndFollowerObjList);
+            var UserAndFollowerObjList = _readUser.ReadTextFile(@"c:\Dev\user.txt");
+            var TweetsList = _readTweets.ReadTextFile(@"c:\Dev\tweet.txt");
+            var Allusers = _processUser.ProcessUser(UserAndFollowerObjList);
+            var output = _tweetProcessor.ProcessTweets(Allusers, TweetsList, UserAndFollowerObjList);
+
+            foreach(var item in output)
+            {
+                Console.WriteLine(item);
+            }
+
         }
     }
 }

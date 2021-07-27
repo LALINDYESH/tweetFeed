@@ -6,9 +6,10 @@ namespace tweetFeed
 {
     public class PrintFormator : IPrintFormater
     {
-        public void formator(string User, string message)
+        public string formator(string User, string message)
         {
-            Console.WriteLine("\t{0}{1}{2}{3}", "@", User, ": ", message);
+          var newString = String.Format("\t{0}{1}{2}{3}", "@", User, ": ", message);
+            return newString; 
         }
     }
 }

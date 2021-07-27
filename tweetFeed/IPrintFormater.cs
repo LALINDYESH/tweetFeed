@@ -6,6 +6,6 @@ namespace tweetFeed
 {
   public interface IPrintFormater
     {
-        void formator(string User, string message);
+        string formator(string User, string message);
     }
 }

@@ -9,20 +9,21 @@ namespace tweetFeed
     public class TweetProcessor : ITweeTProccessor
     { 
         PrintFormator  _printTweet = new PrintFormator();
-        public void ProcessTweets(List<string> userOrFollower, List<Tweets> tweets,List<follower> followers)
+        public List<string> ProcessTweets(List<string> userOrFollower, List<Tweets> tweets,List<follower> followers)
         {
+            var output = new List<string>();
+
             foreach (var user in userOrFollower)
             {
 
-                Console.WriteLine(user);
-                var findtweets = tweets.Where(t => t.UserName == user);
-                //var findFollowertweets = ;
+                output.Add(user);
+                var findtweets = tweets.Where(t => t.UserName == user);            
                 if (findtweets.Count() > 0)
                 {
                     foreach (var ItemTweet in findtweets)
                     {
-                        //prit tweets for the user.
-                        _printTweet.formator(ItemTweet.UserName, ItemTweet.Messsage);
+                        //add tweets for the user.
+                       output.Add( _printTweet.formator(ItemTweet.UserName, ItemTweet.Messsage));
                     }
                 }
                 var _getfollowerTweets = new List<Tweets>();
@@ -51,10 +52,12 @@ namespace tweetFeed
 
                 foreach (var FollowerTweets in _getfollowerTweets)
                 {
-                    _printTweet.formator(FollowerTweets.UserName, FollowerTweets.Messsage);
+                   output.Add( _printTweet.formator(FollowerTweets.UserName, FollowerTweets.Messsage));
                 }
 
             }
+
+            return output;
         }
     }
 }

@@ -8,6 +8,6 @@ namespace tweetFeed
 {
   public interface ITweeTProccessor
     {
-        void ProcessTweets(List<string> userOrFollower, List<Tweets> tweets, List<follower> followers);
+        List<string> ProcessTweets(List<string> userOrFollower, List<Tweets> tweets, List<follower> followers);
     }
 }
